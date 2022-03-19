@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/11a0fbe3a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <main class="container">
+        <h1 id="title"></h1>
+            <table>
+                <thead>
+                    <tr class="list-titles">
+                        <th>ID</th>
+                        <th>Date de création</th>
+                        <th colspan="4" class="etat">Etat</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Nom d'utilisateur</th>
+                        <th>Matricume</th>
+                        <th></th>
+                        <th class="action">Action</th>
+                    </tr>                    
+                </thead>
+                <tbody>
+                    <!-- Users goes here -->
+                </tbody>
+            </table>
+            <form action="">
+                <button class="add--btn">Ajouter utilisateur</button>
+            </form>
+        </main>
+        <div class="modal">
+            <!-- <h4>Utilisateur Ajouer</h4> -->
+                <form action="">
+                    <h2>Ajout d'utilisateurs</h2>
+                    <div class="inputs--container">
+                        <div>
+                            <h5>Nom</h5>
+                            <input type="text" name="firstName" >
+                        </div>
+                        <div>
+                            <h5>Prénom</h5>
+                            <input type="text" name="lastName" >
+                        </div>
+                        <div>
+                            <h5>Etat</h5>
+                            <input type="text" name="status" >
+                        </div>
+                        <div style="flex: 1.16;">
+                            <h5>Nom d'utilisateur</h5>
+                            <input type="text" name="userName" >
+                        </div>
+                        <div style="flex: 2;">
+                            <h5>Date de création</h5>
+                            <input type="datetime-local" name="createdDate">
+                        </div>
+                        <div style="flex: 1 100%;">
+                            <h5>Matricule</h5>
+                            <input type="number" name="registrationNumber" max="4">
+                        </div>
+                    </div>
+                    <button class="save--btn">Enregistrer</button>
+                </form>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>

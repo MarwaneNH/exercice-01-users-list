@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+table,form{
+    width: 100%;
+    max-width: 1400px;
+    margin: 10px 0;
+    padding: 30px 50px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+th,
+td{
+    line-height: 40px;
+    padding: 5px 20px 0 10px;
+    text-align: left;
+    min-width: 120px;
+}
+th{
+    font-weight: 600;
+    font-size: 11pt;
+}
+td{
+    font-size: 10pt;
+    color: #555;
+    border-top: 1px outset rgba(0, 0, 0, 0.1);
+}
+.action,.etat{
+    padding: 0;
+    text-align: center;
+    min-width: 160px;
+}
+.action--td,.etat--td{
+    padding: 0;
+    text-align: center;
+    min-width: 160px;
+}
+.action--td i{
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.action--td i:hover{
+    color: rgb(209, 85, 85);
+}
+.etat--td p{
+    color: white;
+    font-size: 9pt;
+    line-height: 20px;
+    width: 100px;
+    border-radius: 8px;
+    padding: 4px;
+    margin: auto;
+}
+.on-validation {
+    background-color: #FDB64D;
+}
+.valide {
+  background-color: #5BE881;
+}
+.rejected {
+  background-color: #FF0000;
+}
+
+
+form{
+    padding: 20px 20px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease;
+    background-color: white;
+}
+
+.add--btn{
+    cursor: pointer;
+    background-color: #FDB64D;
+    border-radius:6px;
+    color: rgb(59, 59, 59);
+    border: none;
+    line-height: 32px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    float: right;
+}
+
+form h2{
+    padding-left: 20px;
+}
+
+.inputs--container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.inputs--container div{
+    padding: 10px 0;
+    color: gray;
+}
+.inputs--container div h5{
+    font-weight: 500;
+    padding: 4px 0;
+}
+.inputs--container input{
+    width: 350px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+    height: 30px;
+    padding: 8px;
+}
+.save--btn{
+    cursor: pointer;
+    background-color: #FDB64D;
+    border-radius:6px;
+    color: rgb(59, 59, 59);
+    border: none;
+    margin-right: 20px;
+    line-height: 35px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    width: 160px;
+    float: right;
+}
+.displayNone{
+    display: none;
+}
+
+.modal{
+    height: calc(100vh - 1px);
+    width: 100vw;
+    top: calc(50% - 1px);
+    right: 50%;
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.16);
+    border: none;
+    transform: translate(50%,-50%);
+}
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.3);
+}
