@@ -15,9 +15,9 @@
 }
 
 table,form{
-    width: 100%;
+    width: calc(100% - 2*40px);
     max-width: 1400px;
-    margin: 10px 0;
+    margin: 10px 40px;
     padding: 30px 50px;
     border-radius: 6px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@ td{
     line-height: 40px;
     padding: 5px 20px 0 10px;
     text-align: left;
-    min-width: 120px;
+    min-width: 100px;
 }
 th{
     font-weight: 600;

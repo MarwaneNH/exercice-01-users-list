@@ -81,7 +81,6 @@ function deleteUser(e){
 
 // Selection
 const addBtn = document.querySelector('.add--btn');
-const addTitle = document.querySelector('h2');
 const saveBtn = document.querySelector('.save--btn');
 const inputsContainer = document.querySelector('.inputs--container');
 
@@ -93,19 +92,13 @@ const userName = document.querySelector(`input[name=userName]`)
 const createdDate = document.querySelector(`input[name=createdDate]`)
 const registrationNumber = document.querySelector(`input[name=registrationNumber]`)
 
-// Toggle inputs
-function toggleInputs(){
-    addTitle.classList.toggle('displayNone')
-    saveBtn.classList.toggle('displayNone')
-    inputsContainer.classList.toggle('displayNone')
-    addBtn.classList.toggle('displayNone')
-}
+// Open modal on click add button
 addBtn.addEventListener('click',(e) =>{
     e.preventDefault();
-    showModal()
+    openModal()
 })
 
-// Get inputs value
+// Get inputs values/create new user/add it array
 saveBtn.addEventListener('click',(e) =>{
     e.preventDefault();
     // Create user info
@@ -119,31 +112,29 @@ saveBtn.addEventListener('click',(e) =>{
         [registrationNumber.name]: registrationNumber.value,
     }
     // Add user to the array of users
-    users.push(newUser)
-    // Add user to the table in the page
+    users.push(newUser);
+    // Rerender the new users
     tableBody.innerHTML = showUsers(users);
-    // Hide Inputs
-    // toggleInputs()
     // Clean Inputs
-    const allInputs =  [...inputsContainer.querySelectorAll('input')]
-    allInputs.forEach(element => element.value = "")
-    hideModal()
+    const allInputs =  [...inputsContainer.querySelectorAll('input')];
+    allInputs.forEach(element => element.value = "");
+    // Close modal
+    closeModal();
 })
-// added user notification
+// Get the modal
 const modal = document.querySelector('.modal');
 
 // Close the modal on clicking anywhere outside of the modal
 window.onclick = function(event) {
     if (event.target == modal) {
-        hideModal()
+        closeModal();
     }
-  }
+}
 
-
-
-function showModal(){
+// Functions 
+function openModal(){ // Open modal function
     modal.style.display = "flex";
 }
-function hideModal(){
-    modal.style.display = "none"
+function closeModal(){ // Close modal function
+    modal.style.display = "none";
 }

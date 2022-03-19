@@ -13,7 +13,7 @@
 </head>
 <body>
     <main class="container">
-        <h1 id="title"></h1>
+        <!-- Users table -->
             <table>
                 <thead>
                     <tr class="list-titles">
@@ -36,39 +36,41 @@
                 <button class="add--btn">Ajouter utilisateur</button>
             </form>
         </main>
+        <!-- Add user Modal -->
         <div class="modal">
-            <!-- <h4>Utilisateur Ajouer</h4> -->
-                <form action="">
-                    <h2>Ajout d'utilisateurs</h2>
-                    <div class="inputs--container">
-                        <div>
-                            <h5>Nom</h5>
-                            <input type="text" name="firstName" >
-                        </div>
-                        <div>
-                            <h5>Prénom</h5>
-                            <input type="text" name="lastName" >
-                        </div>
-                        <div>
-                            <h5>Etat</h5>
-                            <input type="text" name="status" >
-                        </div>
-                        <div style="flex: 1.16;">
-                            <h5>Nom d'utilisateur</h5>
-                            <input type="text" name="userName" >
-                        </div>
-                        <div style="flex: 2;">
-                            <h5>Date de création</h5>
-                            <input type="datetime-local" name="createdDate">
-                        </div>
-                        <div style="flex: 1 100%;">
-                            <h5>Matricule</h5>
-                            <input type="number" name="registrationNumber" max="4">
-                        </div>
+            <form action="">
+                <h2>Ajout d'utilisateurs</h2>
+                <div class="inputs--container">
+                    <div>
+                        <h5>Nom</h5>
+                        <input type="text" name="firstName" >
                     </div>
-                    <button class="save--btn">Enregistrer</button>
-                </form>
-            </div>
+                    <div>
+                        <h5>Prénom</h5>
+                        <input type="text" name="lastName" >
+                    </div>
+                    <div>
+                        <h5>Etat</h5>
+                        <input type="text" name="status" >
+                    </div>
+                    <div style="flex: 1.16;">
+                        <h5>Nom d'utilisateur</h5>
+                        <input type="text" name="userName" >
+                    </div>
+                    <div style="flex: 2;">
+                        <h5>Date de création</h5>
+                        <input type="datetime-local" name="createdDate" >
+                    </div>
+                    <div style="flex: 1 100%;">
+                        <h5>Matricule</h5>
+                        <input type="number" name="registrationNumber" max="4" >
+                    </div>
+                </div>
+                <button class="save--btn">Enregistrer</button>
+            </form>
+        </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
